@@ -51,19 +51,25 @@ const MovieList = () => {
         {movies.map((movie) => (
           <div className="card" key={movie.id}>
             <div className="card-content">
-              <img
-                src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                alt="img"
-                className="card-img"
-              />
-              <div className="movie-info">
-                <h3 className="movie-title">{movie.title}</h3>
-                <p className='movie-release' >
-                  Release Date: {movie.release_date}
-                </p>
-                <p className='movie-rating'>
-                  Rating: {movie.vote_average} / 10
-                </p>
+              <div className='card-info'>
+                <img
+                  src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                  alt="img"
+                  className="card-img"
+                />
+                <div className="movie-info">
+                  <h3 className="movie-title">{movie.title}</h3>
+                  <p className='movie-release' >
+                    Release Date: {movie.release_date}
+                  </p>
+                  <p className='movie-rating'>
+                    Rating: {movie.vote_average} / 10
+                  </p>
+                </div>
+              </div>
+              <div className="overview">
+                <h3>Overview</h3>
+                <p>{movie.overview}</p>
               </div>
             </div>
           </div>
